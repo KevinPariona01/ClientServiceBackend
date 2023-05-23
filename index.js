@@ -23,6 +23,7 @@ app.use('/icons', express.static(__dirname + icon));
 
 /****IMPORTACIONES DAL****/
 const dbSeguridad = require('./dal/seguridad')
+const dbMovil = require('./dal/movil')
 
 
 /****SOCKET****/
@@ -69,6 +70,11 @@ app.post('/api/seguridad/getPantallaRol',dbSeguridad.getPantallaRol)
 app.post('/api/seguridad/getPantalla',dbSeguridad.getPantalla) 
 app.post('/api/seguridad/updatePantallaRol',dbSeguridad.updatePantallaRol)
 app.post('/api/seguridad/getDataUserPro',dbSeguridad.getDataUserPro) 
+
+/* Movil */
+app.get('/api/movil/getusuario', dbMovil.getusuario)
+
+
 
 
 
