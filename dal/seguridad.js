@@ -52,7 +52,7 @@ const get = (request, response) => {
         response.status(200).json(obj)
     }
 }
-const getUserSinAsignacion = (request, response) => {
+/* const getUserSinAsignacion = (request, response) => {
     var obj = valida.validaToken(request)    
     if (obj.estado) {
         let cadena = 'Select u.n_idseg_userprofile, u.c_username, u.c_nombre1, u.c_nombre2, u.c_appaterno, u.c_apmaterno, u.c_dni, u.b_activo,r.n_idseg_rol, r.c_nombre, u.c_clave, u.n_id_usermodi from seg_userprofile as u  \n\r' +
@@ -72,7 +72,7 @@ const getUserSinAsignacion = (request, response) => {
     } else {
         response.status(200).json(obj)
     }
-}
+} */
 
 const validarDatos = (request, response) => {
     var obj = valida.validaToken(request)    
@@ -419,7 +419,6 @@ const getDataUser = (request, response)=>{
 module.exports = {
     login,
     get,
-    getUserSinAsignacion,
     getrole,
     getRolUser,
     validarDatos,

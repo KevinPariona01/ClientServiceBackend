@@ -56,7 +56,6 @@ app.get('/', (request, response) => {
 /****SEGURIDAD****/
 app.post('/api/seguridad/login', dbSeguridad.login)
 app.post('/api/seguridad/get', dbSeguridad.get)
-app.post('/api/seguridad/getUserSinAsignacion',dbSeguridad.getUserSinAsignacion)
 app.post('/api/seguridad/getrole', dbSeguridad.getrole) 
 app.post('/api/seguridad/getRolUser', dbSeguridad.getRolUser)
 app.post('/api/seguridad/validarDatos', dbSeguridad.validarDatos)
