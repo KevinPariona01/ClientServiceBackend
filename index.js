@@ -69,7 +69,7 @@ app.post('/api/seguridad/deleteRol',dbSeguridad.deleteRol)
 app.post('/api/seguridad/getPantallaRol',dbSeguridad.getPantallaRol) 
 app.post('/api/seguridad/getPantalla',dbSeguridad.getPantalla) 
 app.post('/api/seguridad/updatePantallaRol',dbSeguridad.updatePantallaRol)
-app.post('/api/seguridad/getDataUserPro',dbSeguridad.getDataUserPro) 
+app.post('/api/seguridad/getDataUser',dbSeguridad.getDataUser) 
 
 /* Movil */
 app.get('/api/movil/getusuario', dbMovil.getusuario)

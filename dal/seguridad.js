@@ -394,12 +394,10 @@ const updatePantallaRol = (request, response)=>{
     
 }
 
-const getDataUserPro = (request, response)=>{    
+const getDataUser = (request, response)=>{    
     var obj = valida.validaToken(request);
     if (obj.estado) {
         let cadena = 'select u.c_nombre1, u.c_nombre2, u.c_appaterno, u.c_apmaterno, u.c_dni, r.c_nombre, u.b_activo, r.c_nombre from seg_userprofile u \n\r' +
-        //'inner join pro_usuarioproyecto up on up.n_idseg_userprofile = u.n_idseg_userprofile and up.n_borrado = 0 \n\r' + 
-        //'inner join pro_proyecto p on p.n_idpro_proyecto = up.n_idpro_proyecto and p.n_borrado = 0 \n\r' + 
         'inner join seg_rol r on r.n_idseg_rol = u.n_idseg_rol and r.n_borrado = 0 \n\r' + 
         'where u.n_borrado = 0 \n\r' +   
         'order by u.c_nombre1 asc, u.c_appaterno asc, u.c_apmaterno asc ';
@@ -434,5 +432,5 @@ module.exports = {
     getPantallaRol,
     getPantalla,
     updatePantallaRol,
-    getDataUserPro
+    getDataUser
 }
